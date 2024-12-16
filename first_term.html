@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en"><!--контейнер, который заключает в себе всё содержимое веб-страницы-->
+<head><!--предназначен для хранения других элементов, цель которых — помочь браузеру в работе с данными.-->
+    <meta charset="UTF-8"><!--для хранения информации, задаёт кодировку документа.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--для хранения информации-->
+    <title>first_term_html</title><!--заголовок-->
+    <link rel="stylesheet" href="CSS/common.css"><!--Подключине CSS-->
+    <link rel="icon" href="IMG/favicon.ico">
+</head>
+
+<body><!--тег для хранения содержимого веб-страницы (контента), отображаемого в окне браузера.-->
+
+    <header><!--тег для задания «шапки» сайта-->
+        <img id="img_logo" src="IMG/IMG_0379.JPG" alt="" width="70" height="70"><!--фотография логотипа-->
+        <div> <!--универсальный блочный элемент, предназначен для группирования элементов-->
+            <p>Группа ЭФБО-04-23</p><!--текстовый абзац-->
+            <p>Толмачев Глеб Александрович</p><!--текстовый абзац-->
+        </div>
+    </header>
+
+    <nav><!--навигация по сайту-->
+        <a href="first_web.html">Главная</a> <!--ссылка-->
+        <a href="first_term.html">Первый семестр</a><!--ссылка-->
+        <a href="">Второй семестр</a><!--ссылка-->
+        <a href="second_web.html">Услуги</a><!--ссылка-->
+        <a href="">Авторизация</a><!--ссылка-->
+    </nav>
+
+    <main><!--основное содержимое документа-->
+        <div class="left"><!--универсальный блочный элемент, предназначен для группирования элементов-->
+            <p>Навигация по странице</p><!--текстовый абзац-->
+            <ul><!--неупорядоченный список-->
+                <li><a href="#Lectures">Лекции</a></li><!--отдельный пункт списка-->
+                <li><a href="#Practices">Практики</a></li><!--отдельный пункт списка-->
+                <li><a href="#Address">Адрес вуза</a></li><!--отдельный пункт списка-->
+                <li><a href="#Work_program">Рабочая программа</a></li><!--отдельный пункт списка-->
+            </ul>
+        </div>
+        <div class="right"><!--универсальный блочный элемент, предназначен для группирования элементов-->
+            <h1>Первый семестр</h1><br>
+            <h2 id="Lectures">Лекции</h2><br>
+            <table class="table" style="border: 2px solid #000;">
+                <tr align="left" >
+                    <th>Номер</th>
+                    <th>Тема</th>
+                    <th>Посещение</th>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>1</td>
+                    <td>Основы языка HTML</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox" ></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Углубленное изучение HTML</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>3</td>
+                    <td>Основы работы с CSS</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Bootstrap - работа с фреймворком</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>5</td>
+                    <td>Адаптивная верстка Flexbox и Grid Layout</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Основы языка JavaScript</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>7</td>
+                    <td>Работа с DOM и событиями в JavaScript</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Введение в GitHub и GitHub Pages</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+            </table><br>
+
+            <h2 id="Practices">Практики</h2><br>
+
+            <table class="table" style="border: 2px solid black;">
+                <tr align="left">
+                    <th>Номер</th>
+                    <th>Тема</th>
+                    <th>Посещение</th>
+                    <th>Выполнение</th>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>1</td>
+                    <td>Основы языка HTML</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Формы и кнопки в HTML</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>3</td>
+                    <td>Таблицы и интерактивные элементы HTML</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Основы работы с CSS</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>5</td>
+                    <td>Работа с классами с CSS</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Работа с сетками и разметкой в HTML</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>7</td>
+                    <td>Адаптивная верстка</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Bootstrap</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>9</td>
+                    <td>Основы языка JavaScript</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Базовые задачи на JS</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>11</td>
+                    <td>DOM-структура приложений и работа с объектами в языке JS</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Встраивание скриптов</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>13</td>
+                    <td>Отладка сценариев</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Анимации и работа с ними</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr style="background-color: gray;">
+                    <td>15</td>
+                    <td>GitHub</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Защита проекта</td>
+                    <td>
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                    <td align="right">
+                        <label id="checkbox"><input type="checkbox"></label>
+                    </td>
+                </tr>
+            </table><br>
+
+            <h2 id="Address">Занятия проходят по адресу: Проспект Вернадского 78</h2><br>
+
+            <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/mirea_rossiyskiy_tekhnologicheskiy_universitet/1084832794/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">МИРЭА, Российский технологический университет</a><a href="https://yandex.ru/maps/213/moscow/category/university/184106140/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в Москве</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.478880%2C55.668645&mode=search&oid=1084832794&ol=biz&sctx=ZAAAAAgBEAAaKAoSCZ5eKcsQz0JAEdOgaB7A4EtAEhIJzcmLTMCv5z8REolCy7r%2F4z8iBgABAgMEBSgKOABAjZIHSAFqAnJ1nQHNzMw9oAEAqAEAvQFwfGvowgEcmvikhQT1o9qFBdmF7oDEA4X7%2B6u6A4n%2Fndm9AoICCtC80LjRgNGN0LCKAgCSAgCaAgxkZXNrdG9wLW1hcHOqAgs3MTkzNjgxNTcwMbACAQ%3D%3D&sll=37.478880%2C55.668645&sspn=0.012656%2C0.010710&text=%D0%BC%D0%B8%D1%80%D1%8D%D0%B0&utm_source=ntp_chrome&z=15.87" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            <br>
+            <h2 id="Work_program">Рабочая программа</h2><br>
+
+            <object data="IMG/Задачник.pdf"></object>
+        </div>
+    </main>
+    <footer><!-- задаёт низ сайта-->
+        <p>&copy; Толмачев Глеб Александрович, 2024</p><!--текстовый абзац-->
+        <div class="icons">
+            <img src="IMG/iconfinder-social-media-applications-32vk-4102593_113806.png" alt="">
+            <img src="IMG/whatsappmessage_conversation_whatsap_7149.png" alt="">
+        </div>
+    </footer>

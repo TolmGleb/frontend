@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическое занятие 14: Анимации</title>
+    <link rel="stylesheet" href="CSS/pr-14.css">
+</head>
+<body>
+    <h1>Анимации на JavaScript</h1>
+
+    <p id="text-paragraph">Нажмите на меня, чтобы увидеть изменение цвета!</p>
+
+    <button id="show-lectures">Показать лекции</button>
+    <table id="lectures-table" border="1">
+        <thead>
+
+            <tr>
+                <th>#</th>
+                <th>Название лекции</th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>1</td><td>HTML</td>
+            </tr>
+            <tr>
+                <td>2</td><td>CSS</td>
+            </tr>
+            <tr>
+                <td>3</td><td>JavaScript</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <div>
+        <p>Фотография студента:</p>
+        <img class="student-photo" src="student-photo.jpg" alt="Фото студента" width="200">
+    </div>
+
+    <form id="student-form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Отправить</button>
+        <p class="form-message" id="form-message">Заполните форму</p>
+    </form>
+
+    <script>
+
+        const paragraph = document.getElementById('text-paragraph');
+        paragraph.addEventListener('click', () => {
+            paragraph.classList.toggle('clicked');
+        });
+
+        const showLecturesButton = document.getElementById('show-lectures');
+        const lecturesTable = document.getElementById('lectures-table');
+        showLecturesButton.addEventListener('click', () => {
+            lecturesTable.classList.toggle('visible');
+        });
+
+
+
+        const form = document.getElementById('student-form');
+        const formMessage = document.getElementById('form-message');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            formMessage.textContent = 'Форма отправлена!';
+            formMessage.classList.add('sent');
+        });
+    </script>
+</body>
+</html>

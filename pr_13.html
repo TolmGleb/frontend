@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обработчики событий</title>
+    <style>
+        #student-photo:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-header">Практики первого семестра</h1>
+
+    <table border="1" id="practices-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Тема</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Основы языка HTML</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Формы и кнопки в HTML</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Таблицы и интерактивные элементы HTML</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Основы работы с CSS</td>
+               
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Работа с классами с CSS</td>
+                
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Работа с сетками и разметкой в HTML</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Адаптивная верстка</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Bootstrap</td>
+              
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Основы языка JavaScript</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Базовые задачи на JS</td>
+               
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>DOM-структура приложений и работа с объектами в языке JS</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Встраивание скриптов</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Отладка сценариев</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Анимации и работа с ними</td>
+              
+            </tr>
+            <tr >
+                <td>15</td>
+                <td>GitHub</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Защита проекта</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="change-practices">Посмотреть практики второго семестра</button>
+
+    <div>
+        <p>Фотография студента:</p>
+        <img id="student-photo" src="IMG/etUCe1bt1G4.jpg" alt="Фото студента" width="200">
+    </div>
+
+    <script>
+        document.getElementById('main-header').addEventListener('click', () => {
+            alert('Вы кликнули на заголовок - так держать!');
+        });
+
+        document.getElementById('change-practices').addEventListener('click', () => {
+            const practicesTableBody = document.querySelector('#practices-table tbody');
+            practicesTableBody.innerHTML = `
+                <tr><td>1</td><td>Базовое бэкенд-приложение</td></tr>
+                <tr><td>2</td><td>HTTP-запросы</td></tr>
+                <tr><td>3</td><td>JSON и работа с ним</td></tr>
+                <tr><td>4</td><td>HTTP-ответы</td></tr>
+                <tr><td>5</td><td>Проектирование API</td></tr>
+                <tr><td>6</td><td>Роутинг и его настройка</td></tr>
+                <tr><td>7</td><td>NoSQL базы данных</td></tr>
+                <tr><td>8</td><td>Обеспечение авторизации и доступа пользователей</td></tr>
+                <tr><td>9</td><td>Работа сторонних сервисов уведомления и авторизации</td></tr>
+                <tr><td>10</td><td>Основы ReactJS</td></tr>
+                <tr><td>11</td><td>Работа с компонентами динамической DOM</td></tr>
+                <tr><td>12</td><td>Использование хуков в React</td></tr>
+                <tr><td>13</td><td>Основы микросервисной архитектуры</td></tr>
+                <tr><td>14</td><td>Разработка классических модулей веб-приложений</td></tr>
+            `;
+        });
+
+
+        const studentPhoto = document.getElementById('student-photo');
+
+        studentPhoto.addEventListener('mouseover', () => {
+            studentPhoto.style.width = '220px';
+            studentPhoto.style.width = '200px';
+        });
+
+
+        studentPhoto.addEventListener('click', () => {
+            studentPhoto.src = 'Загородних Николай.jpg';
+            studentPhoto.alt = 'Фото преподавателя';
+        });
+
+        studentPhoto.addEventListener('dblclick', () => {
+            alert('Не налегай, у меня не так много любимых преподавателей');
+        });
+    </script>
+</body>
+</html>

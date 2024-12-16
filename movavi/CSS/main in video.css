@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #555;
+}
+
+p{
+    padding: 0 0 20px 0;
+    line-height: 1.7em;
+}
+
+h1, h2 {
+    font: normal 170% 'cenrury gothic', arial;
+    margin: 0 0 15px 0;
+    padding: 15px 0 5px 0;
+    color: #000;
+}
+
+h2 {
+    font-size: 140%;
+}
+
+a, a:hover{
+    outline: none;
+    text-decoration: underline;
+    color: #eab002;
+}
+
+ul {
+    margin: 2px 0 22px 17px;
+}
+
+ul li {
+    margin: 0 0 6px 0;
+    padding: 0 0 4px 5px;
+}
+
+.header {
+    background-color: darkslateblue;
+    height: 177px;
+    font-size: 0.8; /* Размер шрифта*/
+    margin-left: 0px;
+    margin-right: 0px;
+    min-width: 900px;
+}
+
+.main, .logo, .manubar, .site_content, .footer {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logo {
+    width: 800px;
+    padding-bottom: 40px;
+}
+
+.logo h1, .logo h2 {
+    font: normal 300% 'cenrury gothic', arial, sans-serif;
+    margin: 0 0 0 9px;
+}
+
+logo_text h1, .logo_text h1 a, .logo_text h1 a:hover {
+    padding: 22px 0 0 0;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-decoration: none; /*Убираем подчеркивание у ссылок*/
+}
+
+.logo_text h2 {
+    font-size: 0.9em;
+    padding: 4px 0 0 0;
+    color: #999;
+}
+
+.menubar {
+    width: 900px;
+    height: 40px;
+}
+
+ul.menu{
+    float:right; /*Прижимаем к правой стороне*/
+    
+}
+
+ul.menu li{
+    float: left;/*Прижимаем к левой стороне*/
+    padding: 0 0 0 9px;
+    list-style: none; /*Убираем точки перед элементами*/
+    margin: 1px 2px 0 0 ;
+}
+
+input[type="text"], input[type="password"], input[type="search"] {
+    color: #5d5d5d;
+    width: 60%;
+    padding: 8px;
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+    border: solid 1px #f2f2f2;
+}
+
+ul.menu li a{
+    font: normal 100% 'treduchet ms', sans-serif;
+    display: block; /**/
+    padding: 6px 35px 5px 28px;
+    color: #fff;
+    text-decoration: none;
+}
+
+ul.menu li.selected a{
+    color: #aeb002;
+}
+
+ul.menu li a:hover{
+    color:#e4ec04;
+}
+
+.site_content {
+    width: 880px;
+    overflow: hidden; /*Скрывает все что не в области*/
+    margin: 20px auto 0 auto;
+    background-color: white;
+}
+
+.sidebar_container{
+    float: right;
+    width: 224px;
+}
+
+.sidebar {
+    float: right;
+    width: 222px;
+    padding: 5%;
+    margin: 0 0 16px 0;
+    border: solid 1px #f2f2f2; /*Рамка, solid - прямая рамка*/ 
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.btn {
+    padding: 8px; /*внутренний отступ*/
+    background-color: white;
+    cursor: pointer;
+}
+
+.sidebar h2{
+    color: #136cb2;
+}
+
+.lables_passred_rext {
+    font-size: 0.7em;
+    margin-top: 3%;
+    margin-left: 2%;
+
+}
+
+.sidebar ul{
+    margin: 0;
+}
+
+.sidebar ul li {
+    list-style-type: none;
+    margin: 0 0 0 0;
+}
+
+.sidebar .rating_sidebar {
+    float: right;
+}
+
+.btn1{
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    border: solid 1px #e4ec04;
+    border-radius: 5px;
+    cursor: pointer;
+
+}

@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color:#000;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px solid #000;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#img_logo {
+    border-radius: 20%;
+}
+
+header p {
+    text-align: right;
+}
+
+header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+}
+
+nav {
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+}
+
+nav a{
+    color:#000;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    border-bottom: 1px solid #000;
+    flex-grow: 1;
+}
+
+.left {
+    border-right: 1px solid #000;
+    width: 12%;
+    padding: 10px;
+}
+
+.left p {
+    padding-bottom: 5px;
+}
+
+.right {
+    padding: 10px 15px;
+    width: 88%;
+}
+
+.hoto_and_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#photo {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 650px){
+    .hoto_and_title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body{
+        font-family: 300;
+    }
+
+    #photo{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.video {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.icons {
+    position: absolute;
+    right: 10px;
+}
+
+
+.icons img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+#photo p {
+    border-top: 1px solid #000;;
+}
+
+#business_card_website, #online_store ,#corporate_website {
+    border: 1px solid #000;
+    margin-inline: 2%;
+    grid-auto-flow: column;
+}
+
+#business_card_website img, #online_store img,#corporate_website img{
+
+    margin: 5px;
+}
+
+#business_card_website p, #corporate_website p, #online_store p{
+    text-align: center;
+}
+
+.button_1{
+    margin: 0 0 0 43%;
+}
+
+.button_2{
+    margin: 0 0 0 43%;
+}
+.button_3{
+    margin: 0 0 0 40%;
+}
+.order-btn:hover{
+    color:blueviolet;
+}
+
+.order-btn:active{
+    color:red;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 25%;
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #888;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-family: inherit;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    /* Стили для кнопки отправки */
+    button[type="submit"] {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+}
+
+.close {
+    color: #aaa; /* Цвет кнопки закрытия */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

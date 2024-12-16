@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><!--контейнер, который заключает в себе всё содержимое веб-страницы-->
+<head><!--предназначен для хранения других элементов, цель которых — помочь браузеру в работе с данными.-->
+    <meta charset="UTF-8"><!--для хранения информации, задаёт кодировку документа.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--для хранения информации-->
+    <title>second_web_html</title><!--заголовок-->
+    <link rel="icon" href="IMG/favicon.ico">
+    <link rel="stylesheet" href="CSS/common.css">
+</head>
+<body><!--тег для хранения содержимого веб-страницы (контента), отображаемого в окне браузера.-->
+    <header><!--тег для задания «шапки» сайта-->
+        <div class="Logo">
+            <img src="IMG/IMG_0379.JPG" alt=""><!--фотография логотипа-->
+            <span>Logo</span>
+        </div>
+        <div> <!--универсальный блочный элемент, предназначен для группирования элементов-->
+            <p>Группа ЭФБО-04-23</p><!--текстовый абзац-->
+            <p>Толмачев Глеб Александрович</p><!--текстовый абзац-->
+        </div>
+    </header>
+    <nav><!--навигация по сайту-->
+        <a href="first_web.html">Главная</a> <!--ссылка-->
+        <a href="first_term.html">Первый семестр</a><!--ссылка-->
+        <a href="">Второй семестр</a><!--ссылка-->
+        <a href="second_web.html">Услуги</a><!--ссылка-->
+        <a href="">Авторизация</a><!--ссылка-->
+    </nav>
+    <main><!--основное содержимое документа-->
+        <div class="left">
+            <p>Навигация по странице</p><!--текстовый абзац-->
+            <ul><!--неупорядоченный список-->
+                <li><a href="#Frontend">Разработка веб-приложения</a></li><!--отдельный пункт списка-->
+            </ul>
+        </div>
+        <div class="right">
+            <h1 id="Frontend">Разработка веб-приложения</h1><!--заголовок первого уровня, самый большой может быть только однин на сайте-->
+            <div id="photo">
+
+                <div id="business_card_website"><!--универсальный блочный элемент, предназначен для группирования элементов-->
+                    <img src="IMG/34138694-667f5a8e1c8cf.jpg" alt="моя фотка" width="95%" height="100%"><!--фотография-->
+                    <p>Сайт-визитка</p><!--текстовый абзац-->
+                    <button class="button_1" class="order-btn" data-param="Сайт-визитка" >Заказать</button>
+                </div>
+
+                <div id="corporate_website"><!--универсальный блочный элемент, предназначен для группирования элементов-->
+                    <img src="IMG/860267_935xp.jpg" alt="моя фотка" width="96%" height="100%"><!--фотография-->
+                    <p>Корпоративный сайт</p><!--текстовый абзац-->
+                    <button class="button_2" class="order-btn" data-param="Корпоративный сайт">Заказать</button>
+                </div>
+
+                <div id="online_store"><!--универсальный блочный элемент, предназначен для группирования элементов-->
+                    <img src="IMG/i.webp" alt="моя фотка" width="94%" height="100%"><!--фотография-->
+                    <p>Интернет магазин</p><!--текстовый абзац-->
+                    <button class="button_3" class="order-btn" data-param="Интернет магазин">Заказать</button>
+                </div>
+
+            </div>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, minus aliquid nostrum eos laboriosam possimus sed culpa dolorem optio alias vero cumque velit dolorum nobis, vel repudiandae laudantium dolor dolore.</p>
+        </div>
+    </main>
+    <footer><!-- задаёт низ сайта-->
+        <p>&copy; Толмачев Глеб Александрович, 2024</p><!--текстовый абзац-->
+        <div class="icons">
+            <img src="IMG/iconfinder-social-media-applications-32vk-4102593_113806.png" alt="">
+            <img src="IMG/whatsappmessage_conversation_whatsap_7149.png" alt="">
+        </div>
+    </footer>
+
+    <div id="modalForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 id="modalText">Заголовок модального окна</h1>
+
+            <form id="contactForm">
+                <!-- Поле для ввода имени -->
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <!-- Поле для ввода электронной почты -->
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="country">Страна:</label>
+                <select id="country" name="country">
+                    <option>Россия</option>
+                    <option>Беларусь</option>
+                    <option>Китай</option>
+                    <option>Япония</option>
+                    <option>Америка</option>
+                    <option>Канада</option>
+                    <option>Турция</option>
+                </select>
+
+                <label for="date">Дата:</label>
+                <input type="date" id="date" name="date">
+
+                <!-- Многострочное текстовое поле для комментариев -->
+                <label for="comments">Комментарии:</label>
+                <textarea id="comments" name="comments"></textarea>
+
+                <!-- Кнопка отправки формы -->
+                <button type="submit">Отправить</button>
+            </form>
+
+            <div id="successMessage" style="display:none;">Форма успешно отправлена!</div>
+        </div>
+    </div>
+    <script src="services.js"></script>
+
+    
+</body>
+</html>
