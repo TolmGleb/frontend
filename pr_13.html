@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обработчики событий</title>
-    <style>
-        #student-photo:hover {
-            transform: scale(1.1);
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/pr-14.css">
 </head>
 <body>
     <h1 id="main-header">Практики первого семестра</h1>
 
+    <p id="text-paragraph">Нажми, фокус покажу!</p>
+
     <table border="1" id="practices-table">
         <thead>
             <tr>
-                <th>#</th>
+                <th> </th>
                 <th>Тема</th>
             </tr>
         </thead>
@@ -93,12 +91,47 @@
         </tbody>
     </table>
 
-    <button id="change-practices">Посмотреть практики второго семестра</button>
+    <button id="change-practices">Посмотреть практики второго семестра</button><br>
+
+
+    <button id="change-lectures">Показать лекции</button>
+
+
+    <table border="1" id="lectures-table">
+        <thead>
+            <tr>
+                <th> </th>
+                <th>Название лекции</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Основы языка HTML</td></tr>
+            <tr><td>2</td><td>Углубленное изучение HTML</td></tr>
+            <tr><td>3</td><td>Основы работы с CSS</td></tr>
+            <tr><td>4</td>
+                <td>Bootstrap - работа с фреймворком</td></tr>
+            <tr> <td>5</td>
+                <td>Адаптивная верстка Flexbox и Grid Layout</td></tr>
+                <tr>  <td>6</td>
+                    <td>Основы языка JavaScript</td></tr>
+            <tr><td>7</td>
+                <td>Работа с DOM и событиями в JavaScript</td></tr>
+            <tr><td>8</td>
+                <td>Введение в GitHub и GitHub Pages</td></tr>
+        </tbody>
+    </table>
 
     <div>
         <p>Фотография студента:</p>
-        <img id="student-photo" src="IMG/etUCe1bt1G4.jpg" alt="Фото студента" width="200">
+        <img src="IMG/etUCe1bt1G4.jpg" alt="Фотография студента" class="student-photo">
     </div>
+
+    <form id="form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Отправить</button>
+        <p class="form1" id="form1">Заполните форму</p>
+    </form>
 
     <script>
         document.getElementById('main-header').addEventListener('click', () => {
@@ -106,8 +139,8 @@
         });
 
         document.getElementById('change-practices').addEventListener('click', () => {
-            const practicesTableBody = document.querySelector('#practices-table tbody');
-            practicesTableBody.innerHTML = `
+            const practices = document.querySelector('#practices-table tbody');
+            practices.innerHTML = `
                 <tr><td>1</td><td>Базовое бэкенд-приложение</td></tr>
                 <tr><td>2</td><td>HTTP-запросы</td></tr>
                 <tr><td>3</td><td>JSON и работа с ним</td></tr>
@@ -125,22 +158,26 @@
             `;
         });
 
+        const Button = document.getElementById('change-lectures');
+        const lecturesTable = document.getElementById('lectures-table');
 
-        const studentPhoto = document.getElementById('student-photo');
-
-        studentPhoto.addEventListener('mouseover', () => {
-            studentPhoto.style.width = '220px';
-            studentPhoto.style.width = '200px';
+        Button.addEventListener('click', () => {
+            lecturesTable.classList.toggle('tab');
         });
 
 
-        studentPhoto.addEventListener('click', () => {
-            studentPhoto.src = 'Загородних Николай.jpg';
-            studentPhoto.alt = 'Фото преподавателя';
+        const paragraph = document.getElementById('text-paragraph');
+        paragraph.addEventListener('click', () => {
+            paragraph.classList.toggle('clicked');
         });
 
-        studentPhoto.addEventListener('dblclick', () => {
-            alert('Не налегай, у меня не так много любимых преподавателей');
+        const feedbackForm = document.getElementById('form');
+        const formMessage = document.getElementById('form1');
+
+        feedbackForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            formMessage.textContent = 'Форма отправлена!';
+            formMessage.classList.add('sent');
         });
     </script>
 </body>
